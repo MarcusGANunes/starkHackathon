@@ -1,6 +1,6 @@
 # Intruções
 
-1. Rode o script ```npm run createKeys``` para gerar o par de chaves para a api do Starkbank. As variáveis serão armazenadas em ./backend/keys.
+1. Rode o script ```npm run createKeys``` dentro de ./backend para gerar o par de chaves para a api do Starkbank. As variáveis serão armazenadas em ./backend/keys.
 2. Defina as variáveis de ambiente em ./backend/config/config.env, para isso substitua os valores:
      ```
       PORT=3000
