@@ -2,5 +2,5 @@ backend/keys/privateKey.json
 backend/node_modules/
 backend/package-lock.json
 *.env
-*.pdf
+backend/boletoFiles/*.pdf
 *.pem
