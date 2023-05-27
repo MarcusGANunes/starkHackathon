@@ -1,0 +1,35 @@
+{
+  "name": "starkproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "prod": "SET NODE_ENV=production & node app.js",
+    "createKeys": "node ./utils/createKeys.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@slack/bolt": "^3.13.1",
+    "@slack/events-api": "^3.0.1",
+    "@slack/web-api": "^6.8.1",
+    "axios": "^1.4.0",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "moment": "^2.29.4",
+    "ngrok": "^5.0.0-beta.2",
+    "node-cron": "^3.0.2",
+    "nodecron": "^0.2.0",
+    "nodemailer": "^6.9.2",
+    "starkbank": "^2.17.0"
+  },
+  "devDependencies": {
+    "cors": "^2.8.5",
+    "nodemon": "^2.0.22"
+  }
+}

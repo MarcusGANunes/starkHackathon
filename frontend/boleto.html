@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">    
+    <link rel="icon" type="image/png" href="./images/image-tab.png">
+    <link rel="stylesheet" href="./css/boleto.css">
+    <title>STARK APP</title>
+</head>
+<body>
+    <div id="main-left">
+        <div class="header">
+            <a href="./index.html"><img src="./images/logo.svg" alt="Stark Bank Logo" id="logo"></a>
+        </div>
+        <h1 id="title">O Gerador de Boletos da STARK &#x1F62E; </h1>
+        <h2 id="subtitle">Gere seus boletos, facilmente! Basta registrar os dados do cliente e o valor do boleto. É fácil, rápido e de graça!</h2>
+        <input required type="number" id="amount" placeholder="(R$) Valor do boleto em centavos">
+        <input required type="text" maxlength="10" oninput="formatDate(this)" id="due" placeholder="Vencimento do boleto" >
+        <input required type="text" id="name" placeholder="Nome do cliente">
+        <input required type="text" maxlength="18" id="CNPJ" oninput="formatCNPJ(this)" placeholder="CNPJ do cliente">
+        <input required type="email" id="email" placeholder="MailBox do cliente">
+        <input required type="text" id="street" placeholder="Rua do cliente">
+        <input required type="text" id="complement" placeholder="Complemento do endereço do cliente">
+        <input required type="text" id="district" placeholder="Bairro do cliente">
+        <input required type="text" id="city" placeholder="Cidade do cliente">
+        <input required type="text" maxlength="9" oninput="formatCEP(this)" id="zipCode" placeholder="CEP do cliente">
+        <input required type="text" maxlength="2" id="state" oninput="validarMaiusculas(this)" placeholder="Sigla do estado do cliente">
+        <button onclick="generateBoleto()">Gerar boleto</button>
+    </div>
+    <div id="main-right">
+        <img src="./images/boleto.svg" alt="Usuário gerador de boletos" id="right-image">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/boleto.js"></script>
+</body>
+</html>

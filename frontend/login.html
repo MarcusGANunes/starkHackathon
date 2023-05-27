@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">    
+    <link rel="icon" type="image/png" href="./images/image-tab.png">
+    <link rel="stylesheet" href="./css/login.css">
+    <title>STARK APP</title>
+</head>
+<body>
+    <div id="main-left">
+        <div class="header">
+            <a href="./index.html"><img src="./images/logo.svg" alt="Stark Bank Logo" id="logo"></a>
+        </div>
+        <h1 id="title">O APP de Boletos da STARK &#x1F62E; </h1>
+        <h2 id="subtitle">Para não pagar mais multas com boletos atrasados, basta registrar sua conta do SLACK, juntamente com o CNPJ da sua empresa. É fácil, rápido e de graça!</h2>
+        <input required type="text" name="" id="slackAccount" placeholder="Digite a sua conta do SLACK">
+        <h3 id="footer">Ou utilize o nosso <a href="./boleto.html"><u><span>Gerador de Boletos</span></u></a></h3>
+        <button onclick="generateCode()">Confirmar</button>
+    </div>
+    <div id="main-right">
+        <img src="./images/application-email.svg" alt="Usuário do aplicativo de boletos">
+    </div>
+    <div id="pop-up-codeConfirmation">
+        <h2 class="pop-up-title">Insira o código de confirmação enviado na sua conta SLACK</h2>
+        <input required type="number" name="" id="confirmationCode" placeholder="Digite código enviado a sua conta do SLACK">
+        <button onclick="verifyCode()">Verificar</button>
+    </div>
+    <div id="pop-up-login">
+        <h2 class="pop-up-title">Insira os dados do seu centro de custo! </h2>
+        <input required type="text" name="" id="id-centroDeCustos" placeholder="Digite o ID do seu centro de custos">
+        <input type="number" name="" id="minBalance" placeholder="(Opcional) Digite o saldo mínimo a ser notificado">
+        <button onclick="getBoletos()">Confirmar</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+</html>
